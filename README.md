@@ -129,7 +129,7 @@ You should end up with:
 
 ### 6) Install dependencies
 
-From the Vencord repository folder, run:
+From the Vencord repository folder, run the following command (you need to open your terminal as an Administrator):
 
 ```powershell
 pnpm install
