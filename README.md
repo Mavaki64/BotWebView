@@ -37,6 +37,7 @@ node -v
 ```
 
 If it prints a version (e.g. `v20.11.1`), you can **skip Node installation**.
+
 </details>
 
 <details>
@@ -49,6 +50,7 @@ pnpm -v
 ```
 
 If it prints a version, you can **skip pnpm installation**.
+
 </details>
 
 <details>
@@ -61,6 +63,7 @@ git -v
 ```
 
 If it prints a version, you can **skip git installation**.
+
 </details>
 
 ### 1) Install Node.js (skip if already installed)
@@ -80,6 +83,7 @@ corepack enable
 corepack prepare pnpm@10 --activate
 pnpm -v
 ```
+
 If you have trouble installing pnpm via Corepack, you can install it via npm instead:
 
 ```powershell
@@ -107,9 +111,13 @@ cd Vencord
 
 ### 5) Add this userplugin
 
-Copy this folder into:
+Download the plugin ZIP archive: --> [HERE](https://github.com/Mavaki64/BotWebView/archive/refs/heads/main.zip) <--
 
-`Vencord\src\`
+Open the archive and open the `BotWebView-main` folder. Copy the `botWebView` folder.
+
+Paste this folder into (if the `userplugins` folder doesn't exist, you need to create it):
+
+`Vencord\src\userplugins`
 
 You’ll find this folder in the directory you chose earlier when cloning/installing Vencord.
 
@@ -153,6 +161,7 @@ Go to:
 **Settings → Vencord → Plugins → Bot WebView**
 
 Set:
+
 - **Dashboard URL** (example: `https://bot.example.com/login`)
 
 If the URL is empty, clicking the button will show an error toast.
@@ -161,9 +170,9 @@ If the URL is empty, clicking the button will show an error toast.
 
 When Discord updates, you may need to update/rebuild Vencord from source.
 
-1) Fully close Discord (quit it from the system tray).
-2) Open a terminal in your Vencord repository folder.
-3) Pull updates, reinstall deps, rebuild, then re-inject:
+1. Fully close Discord (quit it from the system tray).
+2. Open a terminal in your Vencord repository folder.
+3. Pull updates, reinstall deps, rebuild, then re-inject:
 
 ```powershell
 git pull
@@ -173,6 +182,7 @@ pnpm inject
 ```
 
 Notes:
+
 - If you have local changes, `git pull` may fail. Commit/stash your changes first.
 - Re-injecting after a rebuild is the simplest way to ensure the new build is loaded.
 
